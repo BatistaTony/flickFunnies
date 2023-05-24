@@ -8,8 +8,6 @@
 import Foundation
 
 
-var API_URL = "http://localhost:3000/"
-
 
 struct AuthResponseModal: Decodable {
    let  accessToken: String

@@ -7,10 +7,13 @@
 
 import Foundation
 
+var API_URL = "http://localhost:3000/"
+
+
 class Constants {
     static let colors = Colors()
-    
 }
+
 
 struct Colors {
     let background =  hexStringToUIColor(hex: "#04151F")

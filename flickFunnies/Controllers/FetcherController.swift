@@ -29,6 +29,7 @@ class FetcherController  {
     
     func makeRequest<T>(endpoint: String, method: String, params: [String: String], model: T.Type)-> Void where T: Decodable{
         
+    
         
         let session = URLSession.shared
         let urlString = URL(string: "\(self.apiUrl)\(endpoint)")
@@ -40,12 +41,16 @@ class FetcherController  {
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
         
-        do {
-            request.httpBody = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
-           
-        }catch {
-            self.delegate?.handleError(data: error.localizedDescription)
+        if(!params.isEmpty){
+            do {
+                request.httpBody = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
+               
+            }catch {
+                self.delegate?.handleError(data: error.localizedDescription)
+            }
         }
+        
+       
         
         
         let task = session.dataTask(with: request) { [self]
@@ -79,6 +84,8 @@ class FetcherController  {
                     
                     let decoder = JSONDecoder()
                     
+                   
+                    
                     let data = try decoder.decode(model.self, from: data!)
                     
                     
@@ -86,7 +93,7 @@ class FetcherController  {
                     
                     
                   } catch  {
-                      print(error.localizedDescription)
+                      
                       self.delegate?.handleError(data: error.localizedDescription)
                 }
         }

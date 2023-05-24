@@ -31,3 +31,34 @@ func hexStringToUIColor (hex: String)-> UIColor {
         )
     
 }
+
+func getImageFromUrl(imageURLString: String, imageView: UIImageView) {
+   
+           if let imageURL = URL(string: imageURLString) {
+              
+               let session = URLSession.shared
+               
+               
+               let task = session.dataTask(with: imageURL) {  (data, response, error) in
+                  
+                   if let error = error {
+                       print("Error loading image: \(error.localizedDescription)")
+                       return
+                   }
+                   
+                   
+                   if let imageData = data {
+                      
+                       if let image = UIImage(data: imageData) {
+                           DispatchQueue.main.async {
+                               imageView.image = image
+                           }
+                       } else {
+                           print("Unable to create image from data")
+                       }
+                   }
+               }
+               
+               task.resume()
+           }
+}

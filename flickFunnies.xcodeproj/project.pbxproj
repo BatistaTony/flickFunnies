@@ -7,23 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		690D148F2A1D8843009CC14D /* FetcherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690D148E2A1D8843009CC14D /* FetcherController.swift */; };
+		690D9CE42A1842EE00FA0A03 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690D9CE22A1842EE00FA0A03 /* PostTableViewCell.swift */; };
+		690D9CE52A1842EE00FA0A03 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 690D9CE32A1842EE00FA0A03 /* PostTableViewCell.xib */; };
+		69ACE78A2A178F89004049E8 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ACE7892A178F89004049E8 /* FeedViewController.swift */; };
+		69ACE78C2A17926B004049E8 /* AuthRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ACE78B2A17926B004049E8 /* AuthRequestModel.swift */; };
 		69AE61F12A16FC3F00542AA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AE61F02A16FC3F00542AA2 /* AppDelegate.swift */; };
 		69AE61F32A16FC3F00542AA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AE61F22A16FC3F00542AA2 /* SceneDelegate.swift */; };
-		69AE61F52A16FC3F00542AA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AE61F42A16FC3F00542AA2 /* ViewController.swift */; };
 		69AE61F82A16FC3F00542AA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69AE61F62A16FC3F00542AA2 /* Main.storyboard */; };
 		69AE61FA2A16FC4000542AA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69AE61F92A16FC4000542AA2 /* Assets.xcassets */; };
 		69AE61FD2A16FC4000542AA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69AE61FB2A16FC4000542AA2 /* LaunchScreen.storyboard */; };
+		69AE62082A16FCDB00542AA2 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AE62072A16FCDB00542AA2 /* UserModel.swift */; };
+		69AE620A2A16FD0B00542AA2 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AE62092A16FD0B00542AA2 /* PostModel.swift */; };
+		69AE62112A16FF3C00542AA2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AE62102A16FF3C00542AA2 /* Constants.swift */; };
+		69AE62132A17008D00542AA2 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AE62122A17008D00542AA2 /* utils.swift */; };
+		69AE62152A17023E00542AA2 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AE62142A17023E00542AA2 /* AuthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		690D148E2A1D8843009CC14D /* FetcherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherController.swift; sourceTree = "<group>"; };
+		690D9CE22A1842EE00FA0A03 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		690D9CE32A1842EE00FA0A03 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		69ACE7892A178F89004049E8 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		69ACE78B2A17926B004049E8 /* AuthRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestModel.swift; sourceTree = "<group>"; };
 		69AE61ED2A16FC3F00542AA2 /* flickFunnies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flickFunnies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69AE61F02A16FC3F00542AA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69AE61F22A16FC3F00542AA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		69AE61F42A16FC3F00542AA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		69AE61F72A16FC3F00542AA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		69AE61F92A16FC4000542AA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69AE61FC2A16FC4000542AA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69AE61FE2A16FC4000542AA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69AE62072A16FCDB00542AA2 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		69AE62092A16FD0B00542AA2 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		69AE62102A16FF3C00542AA2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		69AE62122A17008D00542AA2 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
+		69AE62142A17023E00542AA2 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +74,56 @@
 		69AE61EF2A16FC3F00542AA2 /* flickFunnies */ = {
 			isa = PBXGroup;
 			children = (
+				69AE620F2A16FF3100542AA2 /* Constants */,
+				69AE62062A16FCA100542AA2 /* Controllers */,
+				69AE62052A16FC9500542AA2 /* Models */,
+				69AE62042A16FC8800542AA2 /* Views */,
 				69AE61F02A16FC3F00542AA2 /* AppDelegate.swift */,
 				69AE61F22A16FC3F00542AA2 /* SceneDelegate.swift */,
-				69AE61F42A16FC3F00542AA2 /* ViewController.swift */,
-				69AE61F62A16FC3F00542AA2 /* Main.storyboard */,
+				69AE62122A17008D00542AA2 /* utils.swift */,
 				69AE61F92A16FC4000542AA2 /* Assets.xcassets */,
 				69AE61FB2A16FC4000542AA2 /* LaunchScreen.storyboard */,
 				69AE61FE2A16FC4000542AA2 /* Info.plist */,
 			);
 			path = flickFunnies;
+			sourceTree = "<group>";
+		};
+		69AE62042A16FC8800542AA2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				69AE61F62A16FC3F00542AA2 /* Main.storyboard */,
+				690D9CE32A1842EE00FA0A03 /* PostTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		69AE62052A16FC9500542AA2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				69AE62072A16FCDB00542AA2 /* UserModel.swift */,
+				69AE62092A16FD0B00542AA2 /* PostModel.swift */,
+				69ACE78B2A17926B004049E8 /* AuthRequestModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		69AE62062A16FCA100542AA2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				69AE62142A17023E00542AA2 /* AuthViewController.swift */,
+				690D9CE22A1842EE00FA0A03 /* PostTableViewCell.swift */,
+				69ACE7892A178F89004049E8 /* FeedViewController.swift */,
+				690D148E2A1D8843009CC14D /* FetcherController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		69AE620F2A16FF3100542AA2 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				69AE62102A16FF3C00542AA2 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +187,7 @@
 				69AE61FD2A16FC4000542AA2 /* LaunchScreen.storyboard in Resources */,
 				69AE61FA2A16FC4000542AA2 /* Assets.xcassets in Resources */,
 				69AE61F82A16FC3F00542AA2 /* Main.storyboard in Resources */,
+				690D9CE52A1842EE00FA0A03 /* PostTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +198,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69AE61F52A16FC3F00542AA2 /* ViewController.swift in Sources */,
+				69AE620A2A16FD0B00542AA2 /* PostModel.swift in Sources */,
+				69ACE78C2A17926B004049E8 /* AuthRequestModel.swift in Sources */,
+				69AE62132A17008D00542AA2 /* utils.swift in Sources */,
+				69AE62112A16FF3C00542AA2 /* Constants.swift in Sources */,
+				69AE62152A17023E00542AA2 /* AuthViewController.swift in Sources */,
 				69AE61F12A16FC3F00542AA2 /* AppDelegate.swift in Sources */,
+				69AE62082A16FCDB00542AA2 /* UserModel.swift in Sources */,
+				690D148F2A1D8843009CC14D /* FetcherController.swift in Sources */,
+				690D9CE42A1842EE00FA0A03 /* PostTableViewCell.swift in Sources */,
+				69ACE78A2A178F89004049E8 /* FeedViewController.swift in Sources */,
 				69AE61F32A16FC3F00542AA2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,11 +358,14 @@
 				DEVELOPMENT_TEAM = 9CW72ZZMVG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = flickFunnies/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Flick Funnies";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -318,11 +389,14 @@
 				DEVELOPMENT_TEAM = 9CW72ZZMVG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = flickFunnies/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Flick Funnies";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

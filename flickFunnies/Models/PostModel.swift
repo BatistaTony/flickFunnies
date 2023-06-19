@@ -8,15 +8,22 @@
 import Foundation
 
 
+struct ReactionModel: Decodable {
+    let _id: String
+    let reactionId: String
+    let reactionBody: String
+    let username: String
+    let createdAt: String
+}
+
+
 struct PostModel: Decodable {
-    let id: String
-    let user: User
-    let title: String
-    let content: String
-    let category: String
-    let likes: Int
-    let created_at: String
-    let image: String
+    let _id: String
+    let thoughtText: String
+    let createdAt: String
+    let username: String
+    let reactions: [ReactionModel]
+    let reactionCount: Int
 }
 
 

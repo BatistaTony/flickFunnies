@@ -29,8 +29,6 @@ class FetcherController  {
     
     func makeRequest<T>(endpoint: String, method: String, params: [String: String], model: T.Type)-> Void where T: Decodable{
         
-    
-        
         let session = URLSession.shared
         let urlString = URL(string: "\(self.apiUrl)\(endpoint)")
         var request = URLRequest(url: urlString!)
@@ -56,7 +54,7 @@ class FetcherController  {
         let task = session.dataTask(with: request) { [self]
             (data, response, error) in
             
-            if let error = error {
+             if let error = error {
                 self.delegate?.handleError(data:error.localizedDescription)
                   
                 return;
@@ -66,7 +64,7 @@ class FetcherController  {
                 guard let httpResponse = response as? HTTPURLResponse,
                       (200...299).contains(httpResponse.statusCode)
                 else {
-                let data = String(data: data!, encoding: .utf8)
+                    let data = String(data: data!, encoding: .utf8)
                 
                     self.delegate?.handleError(data: data!.replacingOccurrences(of: "\"", with: ""))
                 
@@ -79,21 +77,18 @@ class FetcherController  {
                   print("nil Data received from the server")
                   return
                 }
-                
+            
+            
+            
                 do {
                     
                     let decoder = JSONDecoder()
                     
-                   
-                    
                     let data = try decoder.decode(model.self, from: data!)
-                    
                     
                     self.delegate?.handleSuccess(data: data)
                     
-                    
                   } catch  {
-                      
                       self.delegate?.handleError(data: error.localizedDescription)
                 }
         }

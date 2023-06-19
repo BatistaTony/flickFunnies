@@ -9,62 +9,62 @@ import UIKit
 
 class FeedViewController: UIViewController, UITableViewDataSource {
     
-
-    
-    var data: [PostModel] = [
-        PostModel(id:"tuy43",
-            user: User(id: "1", username: "punpkineater", email: "test@test.com", avatar: "something.com"),
-            title: "when you trying to run", content: "meme", category: "comedy movie", likes: 5, created_at: "1684890842693", image: "meme")
-        
-    ]
+    var data: [PostModel] = []
     
     let fetcherController = FetcherController(apiUrl: API_URL)
     
     @IBOutlet weak var tableViewFeed: UITableView!
     @IBOutlet weak var avatarView: UIView!
-    
     @IBOutlet weak var navbarView: UIView!
     @IBOutlet weak var navigationBar: UINavigationItem!
     
-    
+   
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         setupNavbarView()
         tableViewFeed.dataSource = self
         fetcherController.delegate = self
-        tableViewFeed.rowHeight = PostTableViewCell().frame.size.width
+        
+        tableViewFeed.estimatedRowHeight = 50
+        tableViewFeed.rowHeight = UITableView.automaticDimension
+       
+    
+        
         tableViewFeed.register(UINib(nibName: "PostTableViewCell", bundle: nil), forCellReuseIdentifier: "PostTableCell")
+        
         getPosts()
+        
     }
+    
+    
+    
     
     
     
 
     @IBAction func signOutPressed(_ sender: UIBarButtonItem) {
+        
     }
     
     
     func setupNavbarView(){
         
         let avatarLabel = UILabel()
-        
         avatarView.layer.cornerRadius = avatarView.frame.width / 2
         avatarView.backgroundColor = Constants.colors.avatar
-        
         avatarView.addSubview(avatarLabel)
-        
         avatarLabel.text = "BO"
         avatarLabel.font = .boldSystemFont(ofSize: 20)
         avatarLabel.textColor = Constants.colors.text1
+        
     }
     
     
     
     func getPosts(){
-        fetcherController.makeRequest(endpoint: "posts", method: "get", params: [:], model: [PostModel].self)
+        fetcherController.makeRequest(endpoint: "thoughts", method: "get", params: [:], model: [PostModel].self)
     }
-    
-    
     
 }
 
@@ -84,39 +84,44 @@ extension FeedViewController {
         
         
         
-        cell.username.text = post.user.username
-        cell.postLikes.text = "\(post.likes)"
+//        cell.username.text = post.username
+//        cell.postLikes.text =  0; //"\(post.likes)"
+//
+       // getImageFromUrl(imageURLString: post.image, imageView: cell.postImageContent)
         
-        getImageFromUrl(imageURLString: post.image, imageView: cell.postImageContent)
+        //let profileImageView = UIImageView()
         
-        let profileImageView = UIImageView()
-        
-        profileImageView.frame = CGRect(x: 0, y: 0, width: cell.postAvatar.frame.size.width, height: cell.postAvatar.frame.size.height)
+       // profileImageView.frame = CGRect(x: 0, y: 0, width: cell.postAvatar.frame.size.width, height: cell.postAvatar.frame.size.height)
         
         
-        getImageFromUrl(imageURLString: post.user.avatar, imageView: profileImageView)
+       // getImageFromUrl(imageURLString: post.user.avatar, imageView: profileImageView)
        
         
-        cell.postAvatar.addSubview(profileImageView)
-        
-        profileImageView.layer.cornerRadius = cell.postAvatar.frame.size.width / 2
-       
-        //TODO: create a function to develop time ago
-        
-        let timeAgo = post.created_at
-        
-        print("make some func to show times ago of \(timeAgo)")
-        
-        cell.timeAgo.text = "5min"
+       // cell.postAvatar.addSubview(profileImageView)
         
         
-        let username = post.user.username.uppercased()
-        let firstChar  = username[username.startIndex]
-        let lastChar =  username.last
-      
-        cell.userNameLabel.text = "\(firstChar)\(lastChar!)"
+//        let timeAgo = post.createdAt
+//
+//
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+//        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+//        let date = dateFormatter.date(from: timeAgo)
+//
+//        cell.timeAgo.text = Date().timeAgoDisplay(date: date!)
+        
+      //  cell.postId = post.id
+        
+        cell.postText.text = post.thoughtText
         
         
+//        let username = post.user.username.uppercased()
+//        let firstChar  = username[username.startIndex]
+//        let lastChar =  username.last
+//
+        cell.userNameLabel.text = "\(post.username)"
+//
+//
         
         
         return cell
@@ -127,7 +132,7 @@ extension FeedViewController {
 extension FeedViewController: FetcherDelegate {
     
     func handleError(data: Any) {
-        print("Error", data)
+        print("Error ==>", data)
     }
     
     func handleSuccess(data: Any) {
@@ -140,5 +145,14 @@ extension FeedViewController: FetcherDelegate {
         
     }
     
+}
+
+
+extension Date {
+    func timeAgoDisplay(date: Date)-> String {
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .full
+        return formatter.localizedString(for: self, relativeTo: date)
+    }
 }
 

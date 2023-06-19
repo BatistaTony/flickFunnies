@@ -7,7 +7,7 @@
 
 import Foundation
 
-var API_URL = "http://localhost:3000/"
+var API_URL = "http://localhost:3001/api/"
 
 
 class Constants {
